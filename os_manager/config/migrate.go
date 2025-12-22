@@ -1,13 +1,13 @@
 package config
 
 import (
-	"context"
+	"context" // controla o ciclo de vida das operaçãoes com o banco
 	"log"
 	"os"
 	"path/filepath"
-	"sort"
+	"sort" // ordenação dos arquivos de migration
 
-	"github.com/jackc/pgx/v5/pgxpool"
+	"github.com/jackc/pgx/v5/pgxpool" // pool de conexões com o postgres
 )
 
 func RunMigrations(db *pgxpool.Pool) {
